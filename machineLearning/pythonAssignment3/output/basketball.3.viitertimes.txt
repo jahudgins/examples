@@ -1,0 +1,30 @@
+basketball.py --time 100
+{'numActions': 7488, 'numTransitions': 12064, 'numStates': 2594}
+VI:  {'elapsed': 1.141005039215088, 'iterations': 17, 'numstates': 2594}
+basketball.py --time 200
+{'numActions': 22248, 'numTransitions': 36184, 'numStates': 7634}
+VI:  {'elapsed': 7.576035976409912, 'iterations': 36, 'numstates': 7634}
+basketball.py --time 300
+{'numActions': 37008, 'numTransitions': 60304, 'numStates': 12674}
+VI:  {'elapsed': 17.678082942962646, 'iterations': 52, 'numstates': 12674}
+basketball.py --time 400
+{'numActions': 51768, 'numTransitions': 84424, 'numStates': 17714}
+VI:  {'elapsed': 32.28715205192566, 'iterations': 67, 'numstates': 17714}
+basketball.py --time 500
+{'numActions': 66528, 'numTransitions': 108544, 'numStates': 22754}
+VI:  {'elapsed': 50.55223798751831, 'iterations': 81, 'numstates': 22754}
+basketball.py --time 600
+{'numActions': 81288, 'numTransitions': 132664, 'numStates': 27794}
+VI:  {'elapsed': 72.28433895111084, 'iterations': 95, 'numstates': 27794}
+basketball.py --time 700
+{'numActions': 96048, 'numTransitions': 156784, 'numStates': 32834}
+VI:  {'elapsed': 98.41946196556091, 'iterations': 108, 'numstates': 32834}
+basketball.py --time 800
+{'numActions': 110808, 'numTransitions': 180904, 'numStates': 37874}
+VI:  {'elapsed': 127.37959790229797, 'iterations': 122, 'numstates': 37874}
+basketball.py --time 900
+{'numActions': 125568, 'numTransitions': 205024, 'numStates': 42914}
+VI:  {'elapsed': 158.31074404716492, 'iterations': 132, 'numstates': 42914}
+basketball.py --time 1000
+{'numActions': 140328, 'numTransitions': 229144, 'numStates': 47954}
+VI:  {'elapsed': 194.41191387176514, 'iterations': 146, 'numstates': 47954}

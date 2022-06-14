@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://en.wikipedia.org/wiki/Pancake_sorting -->
+<html lang="en" dir="ltr" class="client-js ve-not-available"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Pancake sorting - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23wmf16">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="canonical" href="./pancakesorting_files/pancakesorting.html">
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&only=styles&skin=vector&*">
+<style>
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:10d5f32d441941e72673fc73cdfe14a9 */
+.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #C9C9C9;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:22d1681fa868b4ff4fbcb1ec1e58a9ea */
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf16/resources/jquery.tipsy/images/tipsy.png?2014-02-27T16:51:40Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:803c1f0f336a7f4c2cac8a6ff8c8c777 */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf16/extensions/Wikidata/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2014-02-27T16:56:40Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf16/extensions/Wikidata/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2014-02-27T16:56:40Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:d44ef53dd358acdc1e66274bc27508ba */
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6989008023386f50501783f5c5ff5345 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf16/resources/mediawiki.action/images/green-checkmark.png?2014-02-27T16:51:40Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:265f56c57218ecb427e84877851c1dea */
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none} caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6c1d24e90626cec584f0869483f983e7 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf16/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2014-02-27T16:55:00Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf16/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2014-02-27T16:55:00Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf16/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2014-02-27T16:55:00Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf16/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2014-02-27T16:55:00Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:d42b40ddf96a31a5df1d6b00728de342 */
+#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf16/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2014-02-27T16:56:40Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf16/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-02-27T16:56:40Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf16/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-02-27T16:56:40Z)!ie;height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ad21ad0d2632bc7dbd2315e6fea00c68 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=site&only=styles&skin=vector&*">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="./pancakesorting_files/load.php"></script><script src="./pancakesorting_files/load(1).php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Pancake_sorting","wgTitle":"Pancake sorting","wgCurRevisionId":594612886,"wgRevisionId":594612886,"wgArticleId":478065,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with citations using unsupported parameters","Articles with inconsistent citation formats","Sorting algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Pancake_sorting","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf16/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","es","q","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2736589"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,
+"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,
+"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:84f3a60e3d830e516b8bcb14d95fe62e */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="./pancakesorting_files/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf16/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Pancake_sorting skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><div id="centralNotice" class="cn-ToUAmendment"><style type="text/css">
+
+#centralNotice.collapsed #ChangeToU2014_v1_anononly {
+ display: none;
+}
+
+#ChangeToU2014_v1_anononly {
+ position: relative;
+ overflow: hidden;
+ background: url(//upload.wikimedia.org/wikipedia/commons/0/0d/Gray-gradient1.png) bottom repeat-x;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#FFFFFF;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#ChangeToU2014_v1_anononly a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#ChangeToU2014_v1_anononly-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Wikimedia_logo_text_RGB.svg/50px-Wikimedia_logo_text_RGB.svg.png);
+ height: 50px;
+ width: 50px;
+ background-repeat: no-repeat;
+}
+
+#ChangeToU2014_v1_anononly #black-text {
+ font-size: 1.1em;
+ color: black;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+ font-weight:bold;
+}
+
+
+#ChangeToU2014_v1_anononly div#cn-toggle-box {
+ position: absolute;
+ z-index: 98;
+ top: 2px;
+ right: 6px;
+}
+
+#ChangeToU2014_v1_anononly div#cn-translation-link {
+ position:absolute;
+ z-index:50;
+ bottom: 0px;
+ right: 6px;
+ font-size: 0.7em;
+}
+
+#ChangeToU2014_v1_anononly #calltoaction {
+ padding-top: 5px;
+ color: #0645ad;
+}
+
+#cn-translation-link a:link, 
+#cn-translation-link a:visited, 
+#cn-translation-link a:hover { 
+ color: black; 
+} 
+
+</style>
+
+<div id="ChangeToU2014_v1_anononly">
+
+  <a class="cn-full-banner-click" href="http://meta.wikimedia.org/wiki/Terms_of_use/Paid_contributions_amendment" title="">
+<div id="ChangeToU2014_v1_anononly-logo"></div>
+    <div id="black-text">
+   Amending our Terms of Use: <br> Please comment on a proposed amendment regarding undisclosed paid editing.
+     </div>
+  </a>
+ <div id="cn-toggle-box">
+  <a href="http://en.wikipedia.org/wiki/Pancake_sorting#" title="Close" onclick="mw.centralNotice.hideBanner();return false;"><img border="0" src="./pancakesorting_files/CloseWindow19x19.png" alt="close"></a>  
+ </div>
+</div></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Pancake sorting</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="http://en.wikipedia.org/wiki/Pancake_sorting#mw-navigation">navigation</a>, 					<a href="http://en.wikipedia.org/wiki/Pancake_sorting#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:281px;"><a href="http://en.wikipedia.org/wiki/File:Pancake_sort_operation.png" class="image"><img alt="" src="./pancakesorting_files/Pancake_sort_operation.png" width="279" height="236" class="thumbimage"></a>
+<div class="thumbcaption">Demonstration of the primary operation. The spatula is flipping over the top three pancakes, with the result seen below. In the burnt pancake problem, their top sides would now be burnt instead of their bottom sides.</div>
+</div>
+</div>
+<p><b>Pancake sorting</b> is a variation of the <a href="http://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">sorting</a> problem in which the only allowed operation is to reverse the elements of some <i><a href="http://en.wikipedia.org/wiki/Prefix_(computer_science)" title="Prefix (computer science)" class="mw-redirect">prefix</a></i> of the sequence. Unlike a traditional sorting algorithm, which attempts to sort with the fewest comparisons possible, the goal is to sort the sequence in as few reversals as possible. This operation can be visualized by thinking of a stack of <a href="http://en.wikipedia.org/wiki/Pancake" title="Pancake">pancakes</a> in which one is allowed to take the top <i>k</i> pancakes and flip them. A variant of the problem is concerned with <i>burnt</i> pancakes, where each pancake has a burnt side and all pancakes must, in addition, end up with the burnt side on bottom.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="http://en.wikipedia.org/wiki/Pancake_sorting#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#The_pancake_problems"><span class="tocnumber">1</span> <span class="toctext">The pancake problems</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#The_original_pancake_problem"><span class="tocnumber">1.1</span> <span class="toctext">The original pancake problem</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#The_burnt_pancake_problem"><span class="tocnumber">1.2</span> <span class="toctext">The burnt pancake problem</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#The_pancake_problem_on_strings"><span class="tocnumber">2</span> <span class="toctext">The pancake problem on strings</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#History"><span class="tocnumber">3</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#Related_integer_sequences"><span class="tocnumber">4</span> <span class="toctext">Related integer sequences</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="The_pancake_problems">The pancake problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=1" title="Edit section: The pancake problems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="The_original_pancake_problem">The original pancake problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=2" title="Edit section: The original pancake problem">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The maximum number of flips required to sort any stack of <i>n</i> pancakes has been shown to lie between (15/14)<i>n</i> and (18/11)<i>n</i>, but the exact value is not known.<sup id="cite_ref-1" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>The simplest pancake sorting algorithm requires at most 2<i>n</i>−3 flips. In this algorithm, a variation of <a href="http://en.wikipedia.org/wiki/Selection_sort" title="Selection sort">selection sort</a>, we bring the largest pancake not yet sorted to the top with one flip, and then take it down to its final position with one more, then repeat this for the remaining pancakes. Note that we do not count the time needed to find the largest pancake, only the number of flips; if we wished to create a real machine to execute this algorithm in linear time, it would have to both perform prefix reversal (flips) and be able to find the maximum of a range of consecutive numbers in constant time.</p>
+<p>On September 17, 2008, a team of researchers at the <a href="http://en.wikipedia.org/wiki/University_of_Texas_at_Dallas" title="University of Texas at Dallas">University of Texas at Dallas</a> led by Founders Professor <a href="http://en.wikipedia.org/w/index.php?title=Hal_Sudborough&action=edit&redlink=1" class="new" title="Hal Sudborough (page does not exist)">Hal Sudborough</a> announced the acceptance by the journal <i><a href="http://en.wikipedia.org/wiki/Theoretical_Computer_Science_(journal)" title="Theoretical Computer Science (journal)">Theoretical Computer Science</a></i> of a more efficient algorithm for pancake sorting than the one proposed by <a href="http://en.wikipedia.org/wiki/Bill_Gates" title="Bill Gates">Gates</a> and <a href="http://en.wikipedia.org/wiki/Christos_Papadimitriou" title="Christos Papadimitriou">Papadimitriou</a>.<sup id="cite_ref-Gates1979_2-0" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-Gates1979-2"><span>[</span>2<span>]</span></a></sup> This establishes a new upper bound of (18/11)n, improving upon the existing bound of (5/3)n from 1979.<sup id="cite_ref-Sudborough_3-0" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-Sudborough-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-4" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>On November 2, 2011, a paper was submitted to the arXiv announcing a proof that the problem is <a href="http://en.wikipedia.org/wiki/NP-hard" title="NP-hard">NP-hard</a>,<sup id="cite_ref-5" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-5"><span>[</span>5<span>]</span></a></sup> thereby answering a question open for over three decades. It is worth noting, however, that the <a href="http://en.wikipedia.org/wiki/NP-hard" title="NP-hard">NP-hard</a> problem consists of computing the <i>minimum number of flips required to sort n pancakes</i>, and not the actual sorting of the pancakes. As discussed above, the sorting can be trivially computed in O(n) (see <a href="http://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">Big O notation</a>) time, which places it in the polynomial class of problems.</p>
+<h3><span class="mw-headline" id="The_burnt_pancake_problem">The burnt pancake problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=3" title="Edit section: The burnt pancake problem">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In a more difficult variation called the <b>burnt pancake problem</b>, the bottom of each pancake in the pile is burnt, and the sort must be completed with the burnt side of every pancake down. In 2008, a group of undergraduates built a <a href="http://en.wikipedia.org/wiki/DNA_computing" title="DNA computing">bacterial computer</a> that can solve a simple example of the burnt pancake problem by programming <i><a href="http://en.wikipedia.org/wiki/Escherichia_coli" title="Escherichia coli">E. coli</a></i> to flip segments of DNA which are analogous to burnt pancakes. DNA has an orientation (5' and 3') and an order (promoter before coding). Even though the processing power expressed by DNA flips is low, the high number of bacteria in a culture provides a large parallel computing platform. The bacteria report when they have solved the problem by becoming antibiotic resistant.<sup id="cite_ref-6" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-6"><span>[</span>6<span>]</span></a></sup> An animation depicting this process has been produced.<sup id="cite_ref-7" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="The_pancake_problem_on_strings">The pancake problem on strings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=4" title="Edit section: The pancake problem on strings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The above discussion presumes that each pancake is unique, i.e. the sequence on which the prefix reversals are performed is a <i><a href="http://en.wikipedia.org/wiki/Permutation" title="Permutation">permutation</a></i>. However, "strings" are sequences in which a symbol can repeat. Chitturi and Sudborough (2010) and Hurkens et al. (2007) independently showed that the complexity of transforming a compatible string into another with prefix reversals is <a href="http://en.wikipedia.org/wiki/NP-complete" title="NP-complete">NP-complete</a>. They also gave bounds for the same. Hurkens et al. gave an exact algorithm to sort binary and ternary strings. Chitturi (2011) proved that the complexity of transforming a compatible signed string into another with prefix reversals, i.e. the burnt pancake problem on strings, is NP-complete.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=5" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although seen more often as an educational device, pancake sorting also appears in applications in parallel processor networks, in which it can provide an effective routing algorithm between processors.<sup id="cite_ref-8" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-9"><span>[</span>9<span>]</span></a></sup></p>
+<p>The problem is notable as the only well-known mathematics paper ever written by <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a> founder <a href="http://en.wikipedia.org/wiki/Bill_Gates" title="Bill Gates">Bill Gates</a> (as William Gates), entitled "Bounds for Sorting by Prefix Reversal". Published in 1979, it describes an efficient algorithm for pancake sorting.<sup id="cite_ref-Gates1979_2-1" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-Gates1979-2"><span>[</span>2<span>]</span></a></sup> In addition, the most notable paper published by <i><a href="http://en.wikipedia.org/wiki/Futurama" title="Futurama">Futurama</a></i> co-creator <a href="http://en.wikipedia.org/wiki/David_X._Cohen" title="David X. Cohen">David X. Cohen</a> (as David S. Cohen) concerned the burnt pancake problem.<sup id="cite_ref-10" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-10"><span>[</span>10<span>]</span></a></sup> Their collaborators were <a href="http://en.wikipedia.org/wiki/Christos_Papadimitriou" title="Christos Papadimitriou">Christos Papadimitriou</a> (then at <a href="http://en.wikipedia.org/wiki/Harvard_University" title="Harvard University">Harvard</a>, now at <a href="http://en.wikipedia.org/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">Berkeley</a>) and <a href="http://en.wikipedia.org/wiki/Manuel_Blum" title="Manuel Blum">Manuel Blum</a> (then at <a href="http://en.wikipedia.org/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">Berkeley</a>, now at <a href="http://en.wikipedia.org/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</a>), respectively.</p>
+<p>The connected problems of signed sorting by reversals and sorting by reversals were also studied more recently. Whereas efficient exact algorithms have been found for the signed sorting by reversals,<sup id="cite_ref-11" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-11"><span>[</span>11<span>]</span></a></sup> the problem of sorting by reversals has been proven to be hard even to approximate to within certain constant factor,<sup id="cite_ref-12" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-12"><span>[</span>12<span>]</span></a></sup> and also proven to be approximable in polynomial time to within the approximation factor 1.375.<sup id="cite_ref-13" class="reference"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_note-13"><span>[</span>13<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Related_integer_sequences">Related integer sequences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=6" title="Edit section: Related integer sequences">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<caption>Number of stacks of given height that require <i>N</i>&nbsp;flips to get sorted</caption>
+<tbody><tr>
+<th rowspan="2">Height</th>
+<th colspan="15"><i>N</i></th>
+</tr>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>2</th>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>3</th>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>4</th>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+<td>11</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>5</th>
+<td>1</td>
+<td>4</td>
+<td>12</td>
+<td>35</td>
+<td>48</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>6</th>
+<td>1</td>
+<td>5</td>
+<td>20</td>
+<td>79</td>
+<td>199</td>
+<td>281</td>
+<td>133</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>7</th>
+<td>1</td>
+<td>6</td>
+<td>30</td>
+<td>149</td>
+<td>543</td>
+<td>1357</td>
+<td>1903</td>
+<td>1016</td>
+<td>35</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>8</th>
+<td>1</td>
+<td>7</td>
+<td>42</td>
+<td>251</td>
+<td>1191</td>
+<td>4281</td>
+<td>10561</td>
+<td>15011</td>
+<td>8520</td>
+<td>455</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>9</th>
+<td>1</td>
+<td>8</td>
+<td>56</td>
+<td>391</td>
+<td>2278</td>
+<td>10666</td>
+<td>38015</td>
+<td>93585</td>
+<td>132697</td>
+<td>79379</td>
+<td>5804</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>10</th>
+<td>1</td>
+<td>9</td>
+<td>72</td>
+<td>575</td>
+<td>3963</td>
+<td>22825</td>
+<td>106461</td>
+<td>377863</td>
+<td>919365</td>
+<td>1309756</td>
+<td>814678</td>
+<td>73232</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>11</th>
+<td>1</td>
+<td>10</td>
+<td>90</td>
+<td>809</td>
+<td>6429</td>
+<td>43891</td>
+<td>252737</td>
+<td>1174766</td>
+<td>4126515</td>
+<td>9981073</td>
+<td>14250471</td>
+<td>9123648</td>
+<td>956354</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<th>12</th>
+<td>1</td>
+<td>11</td>
+<td>110</td>
+<td>1099</td>
+<td>9883</td>
+<td>77937</td>
+<td>533397</td>
+<td>3064788</td>
+<td>14141929</td>
+<td>49337252</td>
+<td>118420043</td>
+<td>169332213</td>
+<td>111050066</td>
+<td>13032704</td>
+<td>167</td>
+</tr>
+</tbody></table>
+<p>Sequences from <a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="On-Line Encyclopedia of Integer Sequences">The Online Encyclopedia of Integer Sequences</a> of <a href="http://en.wikipedia.org/wiki/Neil_Sloane" title="Neil Sloane">Neil Sloane</a>:</p>
+<ul>
+<li><span class="nowrap"><a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="OEIS"><img alt="OEIS" src="./pancakesorting_files/11px-OEISicon_light.svg.png" width="11" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/17px-OEISicon_light.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/22px-OEISicon_light.svg.png 2x"></a> <a href="http://oeis.org/A058986" class="extiw" title="oeis:A058986">A058986</a></span> – maximum number of flips</li>
+<li><span class="nowrap"><a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="OEIS"><img alt="OEIS" src="./pancakesorting_files/11px-OEISicon_light.svg.png" width="11" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/17px-OEISicon_light.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/22px-OEISicon_light.svg.png 2x"></a> <a href="http://oeis.org/A067607" class="extiw" title="oeis:A067607">A067607</a></span> – number of stacks requiring the maximum number of flips (above)</li>
+<li><span class="nowrap"><a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="OEIS"><img alt="OEIS" src="./pancakesorting_files/11px-OEISicon_light.svg.png" width="11" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/17px-OEISicon_light.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/22px-OEISicon_light.svg.png 2x"></a> <a href="http://oeis.org/A078941" class="extiw" title="oeis:A078941">A078941</a></span> – maximum number of flips for a "burnt" stack</li>
+<li><span class="nowrap"><a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="OEIS"><img alt="OEIS" src="./pancakesorting_files/11px-OEISicon_light.svg.png" width="11" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/17px-OEISicon_light.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/22px-OEISicon_light.svg.png 2x"></a> <a href="http://oeis.org/A078942" class="extiw" title="oeis:A078942">A078942</a></span> – the number of flips for a sorted "burnt-side-on-top" stack</li>
+<li><span class="nowrap"><a href="http://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="OEIS"><img alt="OEIS" src="./pancakesorting_files/11px-OEISicon_light.svg.png" width="11" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/17px-OEISicon_light.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/OEISicon_light.svg/22px-OEISicon_light.svg.png 2x"></a> <a href="http://oeis.org/A092113" class="extiw" title="oeis:A092113">A092113</a></span> – the above triangle, read by rows</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-1"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Fertin, G. and Labarre, A. and Rusu, I. and Tannier, E. and Vialette, S. (2009). <i>Combinatorics of Genome Rearrangements</i>. The MIT Press. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/9780262062824" title="Special:BookSources/9780262062824">9780262062824</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.au=Fertin%2C+G.+and+Labarre%2C+A.+and+Rusu%2C+I.+and+Tannier%2C+E.+and+Vialette%2C+S.&amp;rft.aulast=Fertin%2C+G.+and+Labarre%2C+A.+and+Rusu%2C+I.+and+Tannier%2C+E.+and+Vialette%2C+S.&amp;rft.btitle=Combinatorics+of+Genome+Rearrangements&amp;rft.date=2009&amp;rft.genre=book&amp;rft.isbn=9780262062824&amp;rft.pub=The+MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Gates1979-2"><span class="mw-cite-backlink">^ <a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-Gates1979_2-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-Gates1979_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Bill_Gates" title="Bill Gates">Gates</a>; W.]]; <a href="http://en.wikipedia.org/wiki/Christos_Papadimitriou" title="Christos Papadimitriou">Papadimitriou</a>; C.]] (1979). <a rel="nofollow" class="external text" href="http://www.cs.berkeley.edu/~christos/papers/Bounds%20For%20Sorting%20By%20Prefix%20Reversal.pdf">"Bounds for Sorting by Prefix Reversal"</a>. <i><a href="http://en.wikipedia.org/wiki/Discrete_Mathematics_(journal)" title="Discrete Mathematics (journal)">Discrete Mathematics</a></i> <b>27</b>: 47–57. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2F0012-365X%2879%2990068-2">10.1016/0012-365X(79)90068-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=Bounds+for+Sorting+by+Prefix+Reversal&amp;rft.au=C.%5D%5D&amp;rft.au=Gates&amp;rft.aulast=Gates&amp;rft.au=Papadimitriou&amp;rft.au=W.%5D%5D&amp;rft.date=1979&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cs.berkeley.edu%2F~christos%2Fpapers%2FBounds%2520For%2520Sorting%2520By%2520Prefix%2520Reversal.pdf&amp;rft_id=info%3Adoi%2F10.1016%2F0012-365X%2879%2990068-2&amp;rft.jtitle=Discrete+Mathematics&amp;rft.pages=47%E2%80%9357&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=27" class="Z3988"><span style="display:none;">&nbsp;</span></span> <span style="font-size:100%" class="error citation-comment">Unknown parameter <code>|author_separator=</code> ignored (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#parameter_ignored" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-Sudborough-3"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-Sudborough_3-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.utdallas.edu/news/2008/09/17-002.php?WT.mc_id=NewsEmails&WT.mc_ev=EmailOpen">"Team Bests Young Bill Gates With Improved Answer to So-Called Pancake Problem in Mathematics"</a>. University of Texas at Dallas News Center. September 17, 2008<span class="reference-accessdate">. Retrieved 2008-11-10</span>. "A team of UT Dallas computer science students and their faculty adviser have improved upon a longstanding solution to a mathematical conundrum known as the pancake problem. The previous best solution, which stood for almost 30 years, was devised by Bill Gates and one of his Harvard instructors, Christos Papadimitriou, several years before Microsoft was established."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.btitle=Team+Bests+Young+Bill+Gates+With+Improved+Answer+to+So-Called+Pancake+Problem+in+Mathematics&amp;rft.date=September+17%2C+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.utdallas.edu%2Fnews%2F2008%2F09%2F17-002.php%3FWT.mc_id%3DNewsEmails%26WT.mc_ev%3DEmailOpen&amp;rft.pub=University+of+Texas+at+Dallas+News+Center&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-4"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Chitturi, B.; Fahle, W.; Meng, Z.; Morales, L.; Shields, C.O.; Sudborough, I.H.; Voit, W. (2009). "An upper bound for sorting by prefix reversals". <i>Theoretical Computer Science</i> <b>410</b> (36): 3372. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2Fj.tcs.2008.04.045">10.1016/j.tcs.2008.04.045</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=An+upper+bound+for+sorting+by+prefix+reversals&amp;rft.au=Chitturi%2C+B.&amp;rft.au=Fahle%2C+W.&amp;rft.aufirst=B.&amp;rft.aulast=Chitturi&amp;rft.au=Meng%2C+Z.&amp;rft.au=Morales%2C+L.&amp;rft.au=Shields%2C+C.O.&amp;rft.au=Sudborough%2C+I.H.&amp;rft.au=Voit%2C+W.&amp;rft.date=2009&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2Fj.tcs.2008.04.045&amp;rft.issue=36&amp;rft.jtitle=Theoretical+Computer+Science&amp;rft.pages=3372&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=410" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-5"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Bulteau, Laurent; Fertin, Guillaume; Rusu, Irena (2012). "Pancake Flipping Is Hard". <i>Mathematical Foundations of Computer Science 2012</i>. Lecture Notes in Computer Science <b>7464</b>. p.&nbsp;247. <a href="http://en.wikipedia.org/wiki/ArXiv" title="ArXiv">arXiv</a>:<a rel="nofollow" class="external text" href="http://arxiv.org/abs/1111.0434">1111.0434</a>. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1007%2F978-3-642-32589-2_24">10.1007/978-3-642-32589-2_24</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-3-642-32588-5" title="Special:BookSources/978-3-642-32588-5">978-3-642-32588-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=Mathematical+Foundations+of+Computer+Science+2012&amp;rft.au=Bulteau%2C+Laurent&amp;rft.au=Fertin%2C+Guillaume&amp;rft.aufirst=Laurent&amp;rft.aulast=Bulteau&amp;rft.au=Rusu%2C+Irena&amp;rft.btitle=Pancake+Flipping+Is+Hard&amp;rft.date=2012&amp;rft.genre=bookitem&amp;rft_id=info%3Aarxiv%2F1111.0434&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-642-32589-2_24&amp;rft.isbn=978-3-642-32588-5&amp;rft.pages=247&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=7464" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-6"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Haynes, Karmella A; Broderick, Marian L; Brown, Adam D; Butner, Trevor L; Dickson, James O; Harden, W Lance; Heard, Lane H; Jessen, Eric L; Malloy, Kelly J; Ogden, Brad J; Rosemond, Sabriya; Simpson, Samantha; Zwack, Erin; Campbell, A Malcolm; Eckdahl, Todd T; Heyer, Laurie J; Poet, Jeffrey L (2008). <a rel="nofollow" class="external text" href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2427008">"Engineering bacteria to solve the Burnt Pancake Problem"</a>. <i>Journal of Biological Engineering</i> <b>2</b>: 8. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1186%2F1754-1611-2-8">10.1186/1754-1611-2-8</a>. <a href="http://en.wikipedia.org/wiki/PubMed_Central" title="PubMed Central">PMC</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2427008">2427008</a>. <a href="http://en.wikipedia.org/wiki/PubMed_Identifier" title="PubMed Identifier" class="mw-redirect">PMID</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.ncbi.nlm.nih.gov/pubmed/18492232">18492232</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=Engineering+bacteria+to+solve+the+Burnt+Pancake+Problem&amp;rft.au=Broderick%2C+Marian+L&amp;rft.au=Brown%2C+Adam+D&amp;rft.au=Butner%2C+Trevor+L&amp;rft.au=Campbell%2C+A+Malcolm&amp;rft.au=Dickson%2C+James+O&amp;rft.au=Eckdahl%2C+Todd+T&amp;rft.aufirst=Karmella+A&amp;rft.au=Harden%2C+W+Lance&amp;rft.au=Haynes%2C+Karmella+A&amp;rft.au=Heard%2C+Lane+H&amp;rft.au=Heyer%2C+Laurie+J&amp;rft.au=Jessen%2C+Eric+L&amp;rft.aulast=Haynes&amp;rft.au=Malloy%2C+Kelly+J&amp;rft.au=Ogden%2C+Brad+J&amp;rft.au=Poet%2C+Jeffrey+L&amp;rft.au=Rosemond%2C+Sabriya&amp;rft.au=Simpson%2C+Samantha&amp;rft.au=Zwack%2C+Erin&amp;rft.date=2008&amp;rft.genre=article&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2427008&amp;rft_id=info%3Adoi%2F10.1186%2F1754-1611-2-8&amp;rft_id=info%3Apmc%2F2427008&amp;rft_id=info%3Apmid%2F18492232&amp;rft.jtitle=Journal+of+Biological+Engineering&amp;rft.pages=8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=2" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-7"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.bio.davidson.edu/people/kahaynes/FAMU_talk/Living_computer.swf">E.HOP - E. coli House of Pancakes - computing in vivo</a> (flash applet)</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-8"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal">Gargano, L.; Vaccaro, U.; Vozella, A. (1993). "Fault tolerant routing in the star and pancake interconnection networks". <i>Information Processing Letters</i> <b>45</b> (6): 315–320. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2F0020-0190%2893%2990043-9">10.1016/0020-0190(93)90043-9</a>. <a href="http://en.wikipedia.org/wiki/Mathematical_Reviews" title="Mathematical Reviews">MR</a>&nbsp;<a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=1216942">1216942</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=Fault+tolerant+routing+in+the+star+and+pancake+interconnection+networks&amp;rft.aufirst=L.&amp;rft.au=Gargano%2C+L.&amp;rft.aulast=Gargano&amp;rft.au=Vaccaro%2C+U.&amp;rft.au=Vozella%2C+A.&amp;rft.date=1993&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2F0020-0190%2893%2990043-9&amp;rft.issue=6&amp;rft.jtitle=Information+Processing+Letters&amp;rft.mr=1216942&amp;rft.pages=315%E2%80%93320&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=45" class="Z3988"><span style="display:none;">&nbsp;</span></span>.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation book">Kaneko, K.; Peng, S. (2006). "Disjoint paths routing in pancake graphs". <i>Proceedings of Seventh International Conference on Parallel and Distributed Computing, Applications and Technologies, 2006 (PDCAT '06)</i>. pp.&nbsp;254–259. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FPDCAT.2006.56">10.1109/PDCAT.2006.56</a>. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7695-2736-1" title="Special:BookSources/0-7695-2736-1">0-7695-2736-1</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=Proceedings+of+Seventh+International+Conference+on+Parallel+and+Distributed+Computing%2C+Applications+and+Technologies%2C+2006+%28PDCAT+%2706%29&amp;rft.aufirst=K.&amp;rft.au=Kaneko%2C+K.&amp;rft.aulast=Kaneko&amp;rft.au=Peng%2C+S.&amp;rft.btitle=Disjoint+paths+routing+in+pancake+graphs&amp;rft.date=2006&amp;rft.genre=bookitem&amp;rft_id=info%3Adoi%2F10.1109%2FPDCAT.2006.56&amp;rft.isbn=0-7695-2736-1&amp;rft.pages=254%E2%80%93259&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span>.</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/David_X._Cohen" title="David X. Cohen">Cohen D.S.</a>; <a href="http://en.wikipedia.org/wiki/Manuel_Blum" title="Manuel Blum">Blum, M.</a> (1995). "On the problem of sorting burnt pancakes". <i>Discrete Applied Mathematics</i> <b>61</b> (2): 105. <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2F0166-218X%2894%2900009-3">10.1016/0166-218X(94)00009-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APancake+sorting&amp;rft.atitle=On+the+problem+of+sorting+burnt+pancakes&amp;rft.au=Blum%2C+M.&amp;rft.au=Cohen+D.S.&amp;rft.aulast=Cohen+D.S.&amp;rft.date=1995&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2F0166-218X%2894%2900009-3&amp;rft.issue=2&amp;rft.jtitle=Discrete+Applied+Mathematics&amp;rft.pages=105&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=61" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-11"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Kaplan, H., Shamir, R. and <a href="http://en.wikipedia.org/wiki/Robert_Tarjan" title="Robert Tarjan">Tarjan, R.E.</a> "Faster and Simpler Algorithm for Sorting Signed Permutations by Reversals." <i>Proc.</i> 8th <i>ACM-SIAM SODA</i> (1997), 178-187, 1997.</span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-12"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Berman, P. and <a href="http://en.wikipedia.org/wiki/Marek_Karpinski" title="Marek Karpinski">Karpinski, M.</a> <a rel="nofollow" class="external text" href="http://theory.cs.uni-bonn.de/ftp/reports/cs-reports/1998/85193-CS.ps.gz">"On Some Tighter Inapproximability Results."</a> <i>Proc.</i> 26th <i>ICALP</i> (1999), <i>LNCS</i> 1644, <i>Springer</i>, 200-209, 1999.</span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Pancake_sorting#cite_ref-13"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">Berman, P., <a href="http://en.wikipedia.org/wiki/Marek_Karpinski" title="Marek Karpinski">Karpinski M.</a> and Hannenhalli, S., <a rel="nofollow" class="external text" href="http://theory.cs.uni-bonn.de/ftp/reports/cs-reports/2001/85228-CS.ps.gz">"1.375-Approximation Algorithms for Sorting by Reversals."</a> <i>Proc.</i> 10th <i>ESA</i> (2002), <i>LNCS</i> 2461, <i>Springer</i>, 200-210, 2002.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=8" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Mohammad, H.H. and Hal Sudborough, I. "On the Diameter of the Pancake Network," <i>Journal of Algorithms</i> <b>25</b> (1), 67-94, 1997.</li>
+<li>Roney-Dougal, C. and Vatter, V. "<a rel="nofollow" class="external text" href="http://plus.maths.org/issue54/features/colvatter/">Of pancakes, mice and men</a>," <i>Plus Magazine</i> <b>54</b>, March 2010.</li>
+<li>Chitturi, B. and Sudborough, H. "Prefix reversals on strings". Proc. Int. Conf. Bioinformatics and Computational Biology, Vol. 2 (2010)591–598.</li>
+<li>Hurkens, C., Iersel, L. V., Keijsper, J., Kelk, S., Stougie, L. and Tromp J. "Prefix reversals on binary and ternary strings". SIAM J. Discrete Math. 21(3)(2007) 592–611.</li>
+<li>Chitturi, B. "A note on complexity of genetic mutations". DMAA 3(3) (2011)269-286 <a href="http://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1142%2FS1793830911001206">10.1142/S1793830911001206</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit&section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.cut-the-knot.org/SimpleGames/Flipper.shtml">Cut-the-Knot: Flipping pancakes puzzle</a>, including a Java applet for the pancake problem and some discussion.</li>
+<li><a rel="nofollow" class="external text" href="http://www.math.uiuc.edu/~west/openp/pancake.html">Douglas B. West's "The Pancake Problems"</a></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Pancake_Sorting"><a href="http://en.wikipedia.org/wiki/Eric_W._Weisstein" title="Eric W. Weisstein">Weisstein, Eric W.</a>, "<a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/PancakeSorting.html">Pancake Sorting</a>", <i><a href="http://en.wikipedia.org/wiki/MathWorld" title="MathWorld">MathWorld</a></i>.</span></li>
+<li><a rel="nofollow" class="external text" href="http://www.bio.davidson.edu/people/kahaynes/FAMU_talk/Living_computer.swf">Animation explaining the bacterial computer that can solve the burnt pancake problem.</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tbody><tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" id="collapsibleTable0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a id="collapseButton0" href="http://en.wikipedia.org/wiki/Pancake_sorting#">hide</a>]</span>
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Sorting" title="Template:Sorting"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Sorting" title="Template talk:Sorting"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Sorting&action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">Sorting algorithms</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Theory</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Computational_complexity_theory" title="Computational complexity theory">Computational complexity theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">Big O notation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Total_order" title="Total order">Total order</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(computing)" title="List (computing)" class="mw-redirect">Lists</a></li>
+<li><a href="http://en.wikipedia.org/wiki/In-place_algorithm" title="In-place algorithm">Inplacement</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sorting_algorithm#Stability" title="Sorting algorithm">Stability</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_sort" title="Comparison sort">Comparison sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Adaptive_sort" title="Adaptive sort">Adaptive sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sorting_network" title="Sorting network">Sorting network</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integer_sorting" title="Integer sorting">Integer sorting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Exchange sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bubble_sort" title="Bubble sort">Bubble sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cocktail_sort" title="Cocktail sort">Cocktail sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Odd%E2%80%93even_sort" title="Odd–even sort">Odd–even sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comb_sort" title="Comb sort">Comb sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gnome_sort" title="Gnome sort">Gnome sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Quicksort" title="Quicksort">Quicksort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stooge_sort" title="Stooge sort">Stooge sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bogosort" title="Bogosort">Bogosort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Selection_algorithm" title="Selection algorithm">Selection sorts</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Selection_sort" title="Selection sort">Selection sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Heapsort" title="Heapsort">Heapsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Smoothsort" title="Smoothsort">Smoothsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cartesian_tree#Application_in_sorting" title="Cartesian tree">Cartesian tree sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tournament_sort" title="Tournament sort">Tournament sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cycle_sort" title="Cycle sort">Cycle sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Insertion sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Insertion_sort" title="Insertion sort">Insertion sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shellsort" title="Shellsort">Shellsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Splaysort" title="Splaysort">Splaysort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tree_sort" title="Tree sort">Tree sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Library_sort" title="Library sort">Library sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Patience_sorting" title="Patience sorting">Patience sorting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Merge sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Merge_sort" title="Merge sort">Merge sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cascade_merge_sort" title="Cascade merge sort">Cascade merge sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Oscillating_merge_sort" title="Oscillating merge sort">Oscillating merge sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Polyphase_merge_sort" title="Polyphase merge sort">Polyphase merge sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Strand_sort" title="Strand sort">Strand sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Distribution sorts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/American_flag_sort" title="American flag sort">American flag sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bead_sort" title="Bead sort">Bead sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bucket_sort" title="Bucket sort">Bucket sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Burstsort" title="Burstsort">Burstsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Counting_sort" title="Counting sort">Counting sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pigeonhole_sort" title="Pigeonhole sort">Pigeonhole sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Proxmap_sort" title="Proxmap sort">Proxmap sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Radix_sort" title="Radix sort">Radix sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flashsort" title="Flashsort">Flashsort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Concurrent sorts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bitonic_sorter" title="Bitonic sorter">Bitonic sorter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Batcher_odd%E2%80%93even_mergesort" title="Batcher odd–even mergesort">Batcher odd–even mergesort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pairwise_sorting_network" title="Pairwise sorting network">Pairwise sorting network</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Hybrid_algorithm" title="Hybrid algorithm">Hybrid sorts</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Timsort" title="Timsort">Timsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Introsort" title="Introsort">Introsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Spreadsort" title="Spreadsort">Spreadsort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UnShuffle_sort" title="UnShuffle sort">UnShuffle sort</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSort" title="JSort">JSort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Topological_sorting" title="Topological sorting">Topological sorting</a></li>
+<li><strong class="selflink">Pancake sorting</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Spaghetti_sort" title="Spaghetti sort">Spaghetti sort</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1025
+CPU time usage: 0.708 seconds
+Real time usage: 0.781 seconds
+Preprocessor visited node count: 929/1000000
+Preprocessor generated node count: 4175/1500000
+Post‐expand include size: 36680/2048000 bytes
+Template argument size: 916/2048000 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 2/500
+Lua time usage: 0.088s
+Lua memory usage: 1.92 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:478065-0!*!0!!en!4!* and timestamp 20140217082655
+ -->
+<noscript>&lt;img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /&gt;</noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&oldid=594612886">http://en.wikipedia.org/w/index.php?title=Pancake_sorting&amp;oldid=594612886</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Sorting_algorithms" title="Category:Sorting algorithms">Sorting algorithms</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_with_citations_using_unsupported_parameters" title="Category:Pages with citations using unsupported parameters">Pages with citations using unsupported parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_inconsistent_citation_formats" title="Category:Articles with inconsistent citation formats">Articles with inconsistent citation formats</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Pancake+sorting&type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Pancake+sorting" title="You&#39;re encouraged to log in; however, it&#39;s not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="./pancakesorting_files/pancakesorting.html" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Pancake_sorting" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="./pancakesorting_files/pancakesorting.html">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&utm_medium=sidebar&utm_campaign=C13_en.wikipedia.org&uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 id="p-interaction-label" tabindex="2"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" aria-haspopup="true" aria-controls="p-interaction-list" role="button" aria-pressed="true" aria-expanded="true">Interaction</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="3"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Pancake_sorting" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Pancake_sorting" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&oldid=594612886" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q2736589" title="Link to connected data repository item [alt-shift-g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&page=Pancake_sorting&id=594612886" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 id="p-coll-print_export-label" tabindex="4"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" aria-haspopup="true" aria-controls="p-coll-print_export-list" role="button" aria-pressed="false" aria-expanded="false">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Pancake+sorting">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Pancake+sorting&oldid=594612886&writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Pancake_sorting&printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span class="uls-settings-trigger" tabindex="0" role="button" aria-haspopup="true" original-title="Language settings"></span>
+	<h3 id="p-lang-label" tabindex="5"><a href="http://en.wikipedia.org/wiki/Pancake_sorting#" aria-haspopup="true" aria-controls="p-lang-list" role="button" aria-pressed="true" aria-expanded="true">Languages</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-lang-list">
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Pfannkuchen-Sortierproblem" title="Pfannkuchen-Sortierproblem – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%A8%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%DA%A9%D9%84%D9%88%DA%86%D9%87%E2%80%8C%D8%A7%DB%8C" title="مرتب‌سازی کلوچه‌ای – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Tri_de_cr%C3%AApes" title="Tri de crêpes – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-hy"><a href="http://hy.wikipedia.org/wiki/%D5%86%D6%80%D5%A2%D5%A1%D5%A2%D5%AC%D5%AB%D5%A9%D5%A1%D5%B5%D5%AB%D5%B6_%D5%BF%D5%A5%D5%BD%D5%A1%D5%AF%D5%A1%D5%BE%D5%B8%D6%80%D5%B8%D6%82%D5%B4" title="Նրբաբլիթային տեսակավորում – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Penyortiran_panekuk" title="Penyortiran panekuk – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Ordinamento_delle_frittelle" title="Ordinamento delle frittelle – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%99%D7%99%D7%AA_%D7%A1%D7%99%D7%93%D7%95%D7%A8_%D7%94%D7%A4%D7%A0%D7%A7%D7%99%D7%99%D7%A7%D7%99%D7%9D_%D7%A9%D7%9C_%D7%92%D7%95%D7%93%D7%9E%D7%9F" title="בעיית סידור הפנקייקים של גודמן – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Pancake_sort" title="Pancake sort – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%B8%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0" title="Блинная сортировка – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%B0%D1%87%D0%B8%D0%BD%D0%BA%D0%B0_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%B0%D1%9A%D0%B5" title="Палачинка сортирање – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q2736589#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 February 2014 at 03:17.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Pancake_sorting" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="./pancakesorting_files/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="./pancakesorting_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="./pancakesorting_files/load(2).php"></script>
+<!-- Served by mw1080 in 0.232 secs. -->
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

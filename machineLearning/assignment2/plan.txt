@@ -1,0 +1,272 @@
+234.2 / 50000
+
+substring
+first
+        20 bits
+        SimulatedAnnealing sa = new SimulatedAnnealing(100, .95, hcp);
+        StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(500, 100, 20, gap);
+        MIMIC mimic = new MIMIC(500, 100, pop);
+
+tweaked
+        20 bits
+        double temperature = 10;
+        double cooling = Math.exp(Math.log(.1)/sEvaluations);
+        SimulatedAnnealing sa = new SimulatedAnnealing(temperature, cooling, hcp);
+        StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(1000, 750, 50, gap);
+        MIMIC mimic = new MIMIC(50, 5, pop);
+        max
+
+exp (a-b/t)
+
+
+decide on values for SA, GA, MIMIC
+x add various ga cross-over
+x write getEvaluations for each OptimizationAlgorithm 
+TravelingSalesmanCrossOver
+
+
+start with TrainNN run large sample
+write up trainnn
+--
+fix rubiks and SubstringCompliment
+graphs for SubstringCompliment
+write up substring compliment
+--
+next example
+LinearDiscriminantAnalysis
+NN for filtered/clustered 
+
+
+really got to get started on the report for optimization
+    10 hour optimization
+
+next steps:
+    5 hours Unsupervised
+    20mins PCA eigenvalues
+    45mins LDA description
+    2hr fix test set
+    2hr NN
+        add baseline and lda to nn graph
+    30mins cluster comparison after feature transformation
+
+report
+    look at last assignment
+        not "best performance" but explaining why
+    plan overview
+    fill in first draft
+    revise
+a discussion of your datasets, and why they're interesting: If you're using the same datasets as before at least briefly remind us of what they are so we don't have to revisit your old assignment write-up.
+explanations of your methods: How did you choose k?
+a description of the kind of clusters that you got.
+analyses of your results. Why did you get the clusters you did? Do they make "sense"? If you used data that already had labels (for example data from a classification problem from assignment #1) did the clusters line up with the labels? Do they otherwise line up naturally? Why or why not? Compare and contrast the different algorithms. What sort of changes might you make to each of those algorithms to improve performance? How much performance was due to the problems you chose? Be creative and think of as many questions you can, and as many answers as you can. Take care to justify your analysis with data explictly.
+Can you describe how the data look in the new spaces you created with the various aglorithms? For PCA, what is the distribution of eigenvalues? For ICA, how kurtotic are the distributions? Do the projection axes for ICA seem to capture anything "meaningful"? Assuming you only generate k projections (i.e., you do dimensionality reduction), how well is the data reconstructed by the randomized projections? PCA? How much variation did you get when you re-ran your RP several times (I know I don't have to mention that you might want to run RP many times to see what happens, but I hope you forgive me)?
+When you reproduced your clustering experiments on the datasets projected onto the new spaces created by ICA, PCA and RP, did you get the same clusters as before? Different clusters? Why? Why not?
+When you re-ran your neural network algorithms were there any differences in performance? Speed? Anything at all?
+
+
+
+sources:
+    ABAGAIL
+    Kurtosis: Herman Sheremetyev, adapted from 
+          https://github.com/poplav92/OnlineKurtosisSkewnessVariance/blob/master/src/OnlineKurtosisSkewnessVariance.cpp
+
+    Dan Nuffer: tournament selection and elite selection
+    cgearhart: https://github.com/cgearhart/ABAGAIL/
+        randomizedSelect
+
+$ /c/Python27/python plotcluster.py --maxattributes 4 --directory ../outputSave  --plots ../plots
+
+Part 2
+    x cluster comparison matrix
+    x write centroid (useful for 2d but write them always)
+    x time clustering
+    
+    x add cluster feature
+    x   do I want to add EM features as probabilities
+    x print out 2d after added cluster features
+    x pythonize prints
+    x run small experiments
+
+    timing filtering
+    gaussian kurtosis number
+
+    how to analyze eigenvalues
+
+    make python graphs
+        match for how clusters fit labels (if clusters were classification)
+
+    Run normal nueral network
+
+    meaning of projection axis
+
+    use misclassification instaead of sum of squares
+
+part 1
+    three runs for each puzzle, each instance
+    vary puzzle size, vary iteration max
+    set the random seed (same results future)
+    wall clock time, 
+
+    output
+
+    Explore GA for Rubiks
+        run until solved, report evaluations
+        change value to be max along way
+        change value to be 2 * correct position
+        while it doesn't make a difference in brute force,
+            it really helps with beam search to give higher
+            weights to solutions that are closer
+            (orientation can be "correct" in many different places)
+
+    explore SA/MIMIC for SubstringCompliment
+
+    x fix mimic!
+
+    form 3rd optimization problem
+
+    start report
+
+    use misclassification instaead of sum of squares
+
+
+Random restart hill climbing
+    pros:
+        simpler to implement
+        restarts allow us to scan space
+    cons:
+        gets stuck -- how much restarting is helpful
+
+Simulated Annealing
+    pros:
+        willing to take downward steps
+    cons:
+        random walk -- many iterations to get to other basin of attraction
+        need to sample across entire space
+            -- neighborhood should include larger jumps and get smaller as T goes down
+
+GA
+    pros:
+        more evenly distributed starts
+        keeps some structure from last run (population genetic pool)
+    cons:
+        many random samples
+        cross over is fairly random
+        heavy computation for next round
+        
+mimic:
+    pros:
+        beam search: scans across space
+        takes advantage of structure produced by last round
+        neighborhood dependant traveling
+    cons:
+        even heavier computation? for next round
+
+
+measure how much the space has been explored:
+    range
+    untouched range
+        largest
+        smallest
+        average
+        std. dev.
+    
+
+perhaps vary the increment when restart
+threshold to restart
+restart randomly every so often
+one dimension at a time
+    smaller increments -- how many?
+    how much to start?
+    remember direction
+
+
+think about the representation of weights, try some other possibilities
+iterations, number of instances, wall-clock, 
+training-error, test-error, cross-validation
+time for evaluation function?
+
+todo:
+    add random restarts for RHC
+
+weights
+    discrete representation:
+        number of bits
+        type:
+            fixed point x/(2^numbits)
+            exponential k^(x - 2^numbits)
+            sigmoid
+
+    each weight is a dimension
+    next, previous
+        round-robin dimensions (deterministic? dimension attribute?)
+        all dimensions independently at same time
+        
+
+    fitness-function()
+        apply ann over all training
+        proportion classified correctly
+    
+        
+    
+    
+
+
+search working
+ABAGAIL
+
+java -cp ABAGAIL.jar shared.test.IndepenentComponentAnalysisTest
+~/github/ABAGAIL/src$ jdb -classpath ../ABAGAIL.jar shared.test.IndepenentComponentAnalysisTest
+stop at IndepenentComponentAnalysisTest.java:21
+
+how to debug
+    java -cp MyJar.jar com.example.Main
+    load data
+    create optimization  problem for nn
+    add documentation
+
+---------
+My approach has been to think "what happens if?" and "why?"
+What happens if I vary the size of the problem? I saw that that algorithms behaved differently. Why?
+What happens if I use different hyperparameters (e.g. population size, annealing schedule, etc). How did that change things? Why?
+What happens when I run the algorithms multiple times? How does the performance vary between runs? Why did it behave that way?
+What happens if I use a different crossover operation with GA? How did that change things? Why?
+What works best if I have a time limit? What works best if I use a limit on the # of fitness function evaluations?
+---------
+
+weka graphs  
+    experimenter?
+
+weka implementations:
+        simulated annealing: weka.classifiers.bayes.net.search.global.SimulatedAnnealing
+        randomized hill climbing: weka.classifiers.bayes.net.search.global. ....?
+        genetic algorithms:
+            http://sourceforge.net/projects/wekagp/files/latest/download
+
+    clustering:
+        k-means clustering
+        Expectation Maximization
+
+    feature transformation:
+        Principal components analysis
+        ICA
+
+
+ABAGAIL
+
+bitstings that will work for different algorithms
+design
+
+second data set
+ArffDataSetReaderTest
+
+
+NOTES:
+    Open source strategy:
+        documentation
+        coding guidelines (java starter)
+        standard is better than variety
+        balance between learning/analysis and long term development
+        -> so focused on getting my assignment complete ** NOT ENOUGH TIME ** I **CAN'T **
+        frame work to experiment -- add/change functionality (hooks, inheritance, etc)
+        manage scope so that there is low overhead on the framework
+

@@ -1,0 +1,21 @@
+Decisions:
+    I think wind should just be a global value instead of a wind field.
+    The boat has no way of knowing what the wind is at different locations
+    and so it may as well change based on a random gaussian distribution
+
+Questions:
+    Degrees or radians?
+        If degrees, keep everything in degrees until calling sin/cos
+        If radians, keep everything in radians until displaying values
+    
+    How to structure boats:
+        boat pairs (measured, real)
+            same class?
+            different classes
+        real boat contained in measured boat
+        subclasses?
+    
+list of all boats in environment?
+id's for boats -- just number in environment list (0 is our boat    
+        
+keep track of todo:'s in code

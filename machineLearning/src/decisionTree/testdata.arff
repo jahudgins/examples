@@ -1,0 +1,19 @@
+% This is a speech analysis data file. See isolet.info for more details
+
+@relation simple_test_data
+
+@attribute height real
+@attribute speed real
+@attribute goodness real
+
+@attribute class { happy, grumpy, stressed }
+
+@data
+10,3,4,happy
+9,2,6,grumpy
+11,4,7,stressed
+9,3,7,stressed
+
+% entropy = - (1/4 * log2(1/4) + 1/4 * log2(1/4) + 1/2 * log2(1/2)) = - (-1/2 - 1/2 - 1/2) = 1.5
+% contradictory to test
+% 11,4,5,happy

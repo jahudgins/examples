@@ -1,0 +1,29 @@
+digraph "Basketball" {
+  "Tied R:Far P:H T:35 S:35" [label="b" style=invis];
+  "Tied R:2pt P:A T:40 S:25" [label="Tied\nR:2pt\nP:A\nT:40\nS:25\n-86" fillcolor=gold style=filled];
+  "Tied R:2pt P:A T:35 S:20" [label="Tied\nR:2pt\nP:A\nT:35\nS:20\n-87" fillcolor=gold style=filled];
+  "Tied R:3pt P:A T:35 S:20" [label="b" style=invis];
+  "Tied R:3pt P:A T:40 S:25" [label="Tied\nR:3pt\nP:A\nT:40\nS:25\n-86" fillcolor=gold style=filled];
+  "Tied R:Far P:H T:40 S:35" [label="b" style=invis];
+  "L:3 R:Far P:H T:35 S:35" [label="b" style=invis];
+  "Tied R:2pt P:A T:45 S:30" [label="Tied\nR:2pt\nP:A\nT:45\nS:30\n-85" fillcolor=gold style=filled];
+  "Tied R:2pt P:A T:35 S:35" [label="b" style=invis];
+  "Tied R:2pt P:A T:40 S:35" [label="b" style=invis];
+  "Tied R:2pt P:A T:40 S:25" -> "Tied R:2pt P:A T:35 S:35" [ label = "shoot\n0.17\n0"];
+  "Tied R:2pt P:A T:40 S:25" -> "Tied R:Far P:H T:35 S:35" [ label = "shoot\n0.36\n0"];
+  "Tied R:2pt P:A T:40 S:25" -> "Tied R:2pt P:A T:35 S:20" [color=red style=bold  label = "goto2pt\n1.00\n0"];
+  "Tied R:2pt P:A T:40 S:25" -> "Tied R:3pt P:A T:35 S:20" [ label = "goto3pt\n1.00\n0"];
+  "Tied R:3pt P:A T:40 S:25" -> "L:3 R:Far P:H T:35 S:35" [ label = "shoot\n0.34\n0"];
+  "Tied R:3pt P:A T:40 S:25" -> "Tied R:2pt P:A T:35 S:35" [ label = "shoot\n0.21\n0"];
+  "Tied R:3pt P:A T:40 S:25" -> "Tied R:Far P:H T:35 S:35" [ label = "shoot\n0.45\n0"];
+  "Tied R:3pt P:A T:40 S:25" -> "Tied R:2pt P:A T:35 S:20" [color=red style=bold  label = "goto2pt\n1.00\n0"];
+  "Tied R:3pt P:A T:40 S:25" -> "Tied R:3pt P:A T:35 S:20" [ label = "goto3pt\n1.00\n0"];
+  "Tied R:2pt P:A T:45 S:30" -> "Tied R:2pt P:A T:40 S:35" [ label = "shoot\n0.17\n0"];
+  "Tied R:2pt P:A T:45 S:30" -> "Tied R:Far P:H T:40 S:35" [ label = "shoot\n0.36\n0"];
+  "Tied R:2pt P:A T:45 S:30" -> "Tied R:2pt P:A T:40 S:25" [ label = "goto2pt\n1.00\n0"];
+  "Tied R:2pt P:A T:45 S:30" -> "Tied R:3pt P:A T:40 S:25" [color=red style=bold  label = "goto3pt\n1.00\n0"];
+  "Tied R:2pt P:A T:30 S:30" [label="b" style=invis];
+  "Tied R:Far P:H T:30 S:30" [label="b" style=invis];
+  "Tied R:2pt P:A T:30 S:30" [label="b" style=invis];
+  "Tied R:3pt P:A T:30 S:30" [label="b" style=invis];
+}

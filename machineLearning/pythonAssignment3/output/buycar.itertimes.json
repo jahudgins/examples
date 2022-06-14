@@ -1,0 +1,20 @@
+[
+{"VI":  {"elapsed": 0.07899999618530273, "iterations": 20, "numstates": 298},
+"PI":  {"elapsed": 0.6170029640197754, "iterations": 8, "numstates": 298}},
+{"VI":  {"elapsed": 0.17100095748901367, "iterations": 20, "numstates": 598},
+"PI":  {"elapsed": 1.5390069484710693, "iterations": 8, "numstates": 598}},
+{"VI":  {"elapsed": 0.26000094413757324, "iterations": 20, "numstates": 898},
+"PI":  {"elapsed": 3.6840171813964844, "iterations": 8, "numstates": 898}},
+{"VI":  {"elapsed": 0.3410019874572754, "iterations": 20, "numstates": 1198},
+"PI":  {"elapsed": 7.332035064697266, "iterations": 8, "numstates": 1198}},
+{"VI":  {"elapsed": 0.43200206756591797, "iterations": 20, "numstates": 1498},
+"PI":  {"elapsed": 10.962051153182983, "iterations": 7, "numstates": 1498}},
+{"VI":  {"elapsed": 0.5150020122528076, "iterations": 20, "numstates": 1798},
+"PI":  {"elapsed": 19.71809196472168, "iterations": 8, "numstates": 1798}},
+{"VI":  {"elapsed": 0.6080031394958496, "iterations": 20, "numstates": 2098},
+"PI":  {"elapsed": 25.36211895942688, "iterations": 7, "numstates": 2098}},
+{"VI":  {"elapsed": 0.7090029716491699, "iterations": 20, "numstates": 2398},
+"PI":  {"elapsed": 43.720205783843994, "iterations": 8, "numstates": 2398}},
+{"VI":  {"elapsed": 0.7830040454864502, "iterations": 20, "numstates": 2698},
+"PI":  {"elapsed": 59.213279008865356, "iterations": 8, "numstates": 2698}}
+]

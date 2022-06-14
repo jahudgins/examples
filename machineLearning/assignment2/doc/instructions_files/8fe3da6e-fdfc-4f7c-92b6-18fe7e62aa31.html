@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://t-square.gatech.edu/portal/tool/8fe3da6e-fdfc-4f7c-92b6-18fe7e62aa31?panel=Main -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Assignments</title>
+    <link href="tool_base.css" type="text/css" rel="stylesheet" media="all">
+<link href="tool.css" type="text/css" rel="stylesheet" media="all">
+<script type="text/javascript" language="JavaScript" src="headscripts.js"></script>
+<script type="text/javascript" language="JavaScript">var sakai = sakai || {}; sakai.editor = sakai.editor || {};  sakai.locale = sakai.locale || {};
+sakai.locale.userCountry = 'US';
+sakai.locale.userLanguage = 'en';
+sakai.locale.userLocale = 'en_US';
+sakai.editor.collectionId = '/group/gtc-0132-de45-57e5-97fa-068e606b0007/';
+sakai.editor.enableResourceSearch = false;</script>
+<script type="text/javascript" language="JavaScript"></script>
+<script type="text/javascript" language="JavaScript" src="fckeditor.js"></script>
+<script type="text/javascript" language="JavaScript" src="fckeditor.launch.js"></script>
+	
+    
+    	            
+    
+  </head>
+  <body onload="setMainFrameHeight(&#39;Main8fe3da6exfdfcx4f7cx92b6x18fe7e62aa31&#39;);setFocus(focus_path);" marginwidth="0" marginheight="0">
+<!-- $Id$ -->
+<!-- start: chef_assignments_student_view_submission.vm  -->
+<!-- $Id$ -->
+<!-- start:  assignment_macros.vm -->
+<!-- end:  assignment_macros.vm --><script type="text/javascript" src="jquery.js"></script>
+<link href="assignment.css" type="text/css" rel="stylesheet" media="all">
+<script type="text/javascript" src="assignments.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    setupToggleAreas('toggleAnchor', 'toggledContent', false, 'fast');
+    $('#submissionFileCount').val(1);
+    $('#addMoreAttachmentControls').click(function(e){
+        e.preventDefault();
+        if ($('#submissionFileCount').val() < 5) {
+            var $input = $('#clonableUpload').clone().removeAttr('id').addClass('cloned').appendTo('#clonedHolder').children('input');
+            $input.val('');
+            var $count = $('#submissionFileCount').val();
+            var $nameCount = "upload"+$count;
+            $input.attr("name", $nameCount);
+            $('#submissionFileCount').val(parseInt($('#submissionFileCount').val(), 10) + 1);
+            if ($('#submissionFileCount').val() == 5) {
+                $('#addMoreAttachmentControls').hide();
+                $('#addMoreAttachmentControlsInactive').show();
+            }
+        }
+        $('.cloned a').show();
+        resizeFrame('grow');
+    });
+    
+});
+var notifyDeleteControl = function(){
+    $('#submissionFileCount').val(parseInt($('#submissionFileCount').val(), 10) - 1);
+    if ($('#submissionFileCount').val() < 5) {
+        $('#addMoreAttachmentControls').show();
+        $('#addMoreAttachmentControlsInactive').hide();
+    }
+};
+
+function submitform(id)
+{
+	var theForm = document.getElementById(id);
+	if(theForm && theForm.onsubmit)
+	{
+		theForm.onsubmit();
+	}
+	if(theForm && theForm.submit)
+	{
+		theForm.submit();
+	}
+}
+		
+</script>
+
+
+<div class="portletBody">
+															<h3>Assignment
+																	<span class="highlight">
+						 	- In progress
+							</span>
+										</h3>
+																					<p class="instruction">
+								 	Add attachment(s), then choose the appropriate button at the bottom.
+							</p>	
+						<table class="itemSummary" summary="The assignment info">
+				<tbody><tr>
+					<th>
+						Title
+					</th>
+					<td>
+						Randomized Optimization, Unsupervised Learning, and Dimensionality Reduction
+																	</td>
+				</tr>
+				<tr>
+					<th>
+						Due
+					</th>
+					<td>
+						Mar 30, 2014 11:55 pm
+					</td>
+				</tr>
+																					<tr>
+					<th>
+						Status
+					</th>
+					<td>
+													Not Started
+											</td>
+				</tr>
+																			<tr>	
+							<th>
+								Grade Scale
+							</th>
+							<td>
+								Points
+																	(max 100.0)
+															</td>
+						</tr>
+																								</tbody></table>
+		<h4>
+			Instructions
+		</h4>
+		
+					<div class="textPanel"><h2>Numbers</h2>
+<p>The assignment is worth 20% of your final grade.</p>
+<p>It is divided into two major parts, reflecting the two major topics of this part of the course. It might help your planning if you think of it as two assignments that have been put together. Divide your time appropriately.</p>
+<h2><u>Part the First</u><br>
+<br>
+Why?</h2>
+<p>The purpose of this part of the project is to explore random search.  As always, it is important to realize that understanding an algorithm or technique requires more than reading about that algorithm or even implementing it.  One should actually have experience seeing  how it behaves under a variety of circumstances.</p>
+<p>As such, you will be asked to implement or steal several randomized search algorithms. In addition, you will be asked to exercise your creativity in coming up with problems that exercise the strengths of each.</p>
+<p>As always, you may program in any language that you wish (we do prefer java, matlab, Lisp or C++; let us know beforehand if you're going to use something else). In any case <em>it is your responsibility</em> to make sure that the code runs on the standard CoC linux boxes.  Re-read that last sentence.</p>
+<p><strong><em>Read everything below carefully!</em></strong></p>
+<p>&nbsp;</p>
+<h2>The Problems Given to You</h2>
+<p>You must implement four local random search algorithms.  They are:</p>
+<ol>
+    <li>randomized hill climbing</li>
+    <li>simulated annealing</li>
+    <li>a genetic algorithm</li>
+    <li>MIMIC</li>
+</ol>
+<p>You will then use the first three algorithms to find good weights for a neural network. In particular, you will use them instead of backprop for the neural network you used in assignment #1 on at least one of the problems you created for assignment #1.  Notice that weights in a neural network are continuous and real-valued instead of discrete so you might want to think a little bit about what it means to apply these sorts of algorithms in such a domain.</p>
+<p>&nbsp;</p>
+<h2>The Problems You Give Us</h2>
+<p>In addition to finding weights for a neural network, you must create three optimization problem domains on your own.  For the purpose of this assignment an "optimization problem" is just a <em>fitness function</em> one is trying to <em>maximize</em> (as opposed to a cost function one is trying to minimize).  This doesn't make things easier or harder, but picking one over the other makes things easier for us to grade.</p>
+<p>Please note that <em>the problems you create should be over discrete-valued parameter spaces. Bit strings are preferable.</em></p>
+<p>The first problem should highlight advantages of your genetic algorithm, the second of simulated annealing, and the third of MIMIC. Be creative and thoughtful.  It is not required that the problems be complicated or painful.  They can be simple. For example, the 4-peaks and k-color problems are rather straightforward, but illustrate relative strengths rather neatly.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><u>Part the Second</u></h2>
+<h2>Why?</h2>
+<p>Now it's time to explore unsupervised learning algorithms. This part of the assignment asks you to use some of the clustering and dimensionality reduction algorithms we've looked at in class and to revisit earlier assignments. The goal is for you to think about how these algorithms are the same as, different from, and interact with your earlier work.</p>
+<p>The same ground rules apply for programming languages.</p>
+<p><b><i>Read everything below carefully!</i></b></p>
+<p>&nbsp;</p>
+<h2>The Problems Given to You</h2>
+<p>You are to implement (or find the code for) six algorithms. The first two are clustering algorithms:</p>
+<ul>
+    <li><i>k</i>-means clustering</li>
+    <li>Expectation Maximization</li>
+</ul>
+<p>You can choose your own measures of distance/similarity. Naturally, you'll have to justify your choices, but you're practiced at that sort of thing by now.</p>
+<p>The last four algorithms are dimensionality reduction algorithms:</p>
+<ul>
+    <li>PCA</li>
+    <li>ICA</li>
+    <li>Randomized Projections</li>
+    <li>Any other feature selection algorithm you desire</li>
+</ul>
+<p>You are to run a number of experiments. Come up with at least two datasets. If you'd like (and it makes a lot of sense in this case) you can use the ones you used in the first assignment or, if it makes any sense, the first part of this assignment.</p>
+<ol>
+    <li>Run the clustering algorithms on the data sets and describe what you see.</li>
+    <li>Apply the dimensionality reduction algorithms to the two datasets and describe what you see.</li>
+    <li>Reproduce your clustering experiments, but on the data after you've run dimensionality reduction on it.</li>
+    <li>Apply the dimensionality reduction algorithms to one of your datasets from assignment #1 (if you've reused the datasets from assignment #1 to do experiments 1-3 above then you've already done this) and rerun your neural network learner on the newly projected data.</li>
+    <li>Apply the clustering algorithms to the same dataset to which you just applied the dimensionality reduction algorithms (you've probably already done this), treating the clusters as if they were new features. In other words, treat the clustering algorithms as if they were dimensionality reduction algorithms. Again, rerun your neural network learner on the newly projected data.</li>
+</ol>
+<h2><br>
+What to Turn In</h2>
+<p>You must submit a tar or zip file named&nbsp;<i>yourgtaccount</i>.{zip,tar,tar.gz} in t-square that contains a single folder or directory named&nbsp;<i>yourgtaccount</i>&nbsp;that in turn contains: --&gt;</p>
+<ol>
+    <li>A file named&nbsp;<i>README.txt</i>&nbsp;that contains instructions for running your code</li>
+    <li>your code</li>
+    <li>a file named yourgtaccount-<i>analysis.pdf</i>&nbsp;that contains your writeup.</li>
+    <li>any supporting files you need (for example, your datasets).</li>
+</ol>
+<p>The file&nbsp;<i>analysis</i>.pdf should contain:&nbsp;<br>
+<br>
+<u>Part 1<br>
+<br>
+</u></p>
+<ul>
+    <li>the results you obtained running the algorithms on the networks: why did you get the results you did? what sort of changes might you make to each of those algorithms to improve performance? Feel free to include any supporting graphs or tables. And by "feel free to", of course, I mean "do".</li>
+    <li>a description of your optimization problems, and why you feel that they are interesting and exercise the strengths and weaknesses of each approach. Think hard about this.</li>
+    <li>analyses of your results. Why did you get the results you did? Compare and contrast the different algorithms. What sort of changes might you make to each of those algorithms to improve performance? How fast were they in terms of wall clock time? Iterations? Which algorithm performed best? How do you define best? Be creative and think of as many questions you can, and as many answers as you can. You know the drill.</li>
+</ul>
+<p>&nbsp;</p>
+<div><u>Part 2</u></div>
+<ul>
+    <li>a discussion of your datasets, and why they're interesting: If you're using the same datasets as before at least briefly remind us of what they are so we don't have to revisit your old assignment write-up.</li>
+    <li>explanations of your methods: How did you choose&nbsp;<i>k</i>?</li>
+    <li>a description of the kind of clusters that you got.</li>
+    <li>analyses of your results. Why did you get the clusters you did? Do they make "sense"? If you used data that already had labels (for example data from a classification problem from assignment #1) did the clusters line up with the labels? Do they otherwise line up naturally? Why or why not? Compare and contrast the different algorithms. What sort of changes might you make to each of those algorithms to improve performance? How much performance was due to the problems you chose? Be creative and think of as many questions you can, and as many answers as you can. Take care to justify your analysis with data explictly.</li>
+    <li>Can you describe how the data look in the new spaces you created with the various aglorithms? For PCA, what is the distribution of eigenvalues? For ICA, how kurtotic are the distributions? Do the projection axes for ICA seem to capture anything "meaningful"? Assuming you only generate&nbsp;<i>k</i>&nbsp;projections (<i>i.e.</i>, you do dimensionality reduction), how well is the data reconstructed by the randomized projections? PCA? How much variation did you get when you re-ran your RP several times (I know I don't have to mention that you might want to run RP many times to see what happens, but I hope you forgive me)?</li>
+    <li>When you reproduced your clustering experiments on the datasets projected onto the new spaces created by ICA, PCA and RP, did you get the same clusters as before? Different clusters? Why? Why not?</li>
+    <li>When you re-ran your neural network algorithms were there any differences in performance? Speed? Anything at all?</li>
+</ul>
+<p>It might be difficult to generate the same kinds of graphs for this part of the assignment as you did before; however, you should come up with some way to describe the kinds of clusters you get. If you can do that visually all the better.&nbsp;<br>
+<br>
+<b><br>
+Note: Analysis writeup is limited to 20 pages total.<br>
+</b>&nbsp;</p>
+<h2>Grading Criteria</h2>
+<p>At this point you are not surprised to read that you are being graded on your analysis more than anything else. I will refer you to this section from assignment #1 for a more detailed explanation. On the other hand, I will also point out that implementing some of these algorithms is very easy (almost not worth stealing the code, but feel free to do so anyway) but at least one of them requires some time (luckily, there are now versions of this algorithm out there to steal). You should start now.&nbsp;</p></div>
+																											<hr class="itemSeparator">
+						<h3>Submission</h3> 
+		
+
+
+					<form name="addSubmissionForm" id="addSubmissionForm" action="8fe3da6e-fdfc-4f7c-92b6-18fe7e62aa31.html" method="post" onsubmit="return true;" enctype="multipart/form-data">
+		<input type="hidden" name="eventSubmit_doRead_add_submission_form" value="x">
+		<input type="hidden" name="option" id="option" value="cancel">
+		<input type="hidden" name="currentAttachment" value="">
+		<input type="hidden" name="assignmentId" value="/assignment/a/gtc-0132-de45-57e5-97fa-068e606b0007/f91c653d-44cd-49cc-87f9-b409b6ff44c5">
+																							<p class="instruction">
+													This assignment allows submissions by attaching documents only.
+											</p>
+								<div class="highlightPanel" style="background:#ffe">
+					<h3 style="margin-top:0;margin-bottom:.5em">
+						Attachments
+					</h3>	
+																					<p class="instruction">No attachments yet</p>
+																<div class="highlightPanel specialLink" style="margin:0;padding-bottom:.5em;background:#fff">
+																																										<input type="hidden" name="submissionFileCount" id="submissionFileCount" value="1">
+									<table border="0" cellpadding="0" cellspacing="0" class="listHier  centerLines" style="width:auto;margin:0">
+										<tbody><tr>
+											<td>
+												<span>Select a file from computer</span>
+											</td>
+											<td>
+												<div id="clonableUpload"> 
+													<input type="file" name="upload" class="upload" id="clonableUpload" onchange="javascript:showNotif(&#39;submitnotifxxx&#39;,&#39;post&#39;,&#39;addSubmissionForm&#39;);document.getElementById(&#39;addSubmissionForm&#39;).action=&#39;https://t-square.gatech.edu/portal/tool/8fe3da6e-fdfc-4f7c-92b6-18fe7e62aa31?panel=Main&amp;sakai_action=doAttachUpload&#39;;submitform(&#39;addSubmissionForm&#39;);" "=""> 
+													<span id="submitnotifxxx" class="messageProgress" style="visibility:hidden">Uploading file(s)</span>
+												</div>
+											</td>
+											<td>
+												<span class="navIntraToolLink">
+													<input class="disableme enabled" type="button" value="or select files from workspace or site" name="attach" id="attach" accesskey="a" onclick="document.addSubmissionForm.onsubmit();document.addSubmissionForm.option.value=&#39;attach&#39;; document.addSubmissionForm.submit(); return false;">
+												</span>	
+											</td>
+										</tr>	
+										<tr>
+											<td></td>
+											<td id="clonedHolder"></td>
+											<td></td>
+											<td></td>										
+											</tr>
+									</tbody></table>	
+									
+																					</div>
+																							</div>
+				
+																														<div class="act messageInformation">
+							<input type="button" class="active" name="post" accesskey="s" id="post" value="Submit" onclick="document.addSubmissionForm.onsubmit();showNotif(&#39;submitnotif&#39;,&#39;post&#39;,&#39;addSubmissionForm&#39;); document.addSubmissionForm.option.value=&#39;post&#39;; document.addSubmissionForm.submit(); return false;">
+																	<input class="disableme" type="button" name="preview" accesskey="v" id="preview" value="Preview" onclick="document.addSubmissionForm.onsubmit();showNotif(&#39;submitnotif&#39;,&#39;preview&#39;,&#39;addSubmissionForm&#39;);document.addSubmissionForm.option.value=&#39;preview&#39;; document.addSubmissionForm.submit(); return false;">
+							<input class="disableme" type="button" name="save" accesskey="d" id="save" value="Save Draft" onclick="document.addSubmissionForm.onsubmit();showNotif(&#39;submitnotif&#39;,&#39;save&#39;,&#39;addSubmissionForm&#39;);document.addSubmissionForm.option.value=&#39;save&#39;; document.addSubmissionForm.submit(); return false;">
+														<input class="disableme" type="button" name="cancel" accesskey="x" id="cancel" value="Cancel" onclick="document.addSubmissionForm.onsubmit();document.addSubmissionForm.option.value=&#39;cancel&#39;; document.addSubmissionForm.submit(); return false;">
+							<span class="messageInformation">Don't forget to save or submit</span>
+									<span id="submitnotif" style="visibility:hidden">Processing......</span>
+			</div>
+			</form>
+	</div>
+<!-- end: chef_assignments_student_view_submission.vm  -->
+</body></html>

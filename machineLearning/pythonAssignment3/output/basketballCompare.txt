@@ -1,0 +1,16 @@
+RLU vs RLU rewards: mean:40.1, std.dev:100.027446234
+RLU vs VI rewards: mean:-45.9, std.dev:72.4685449005
+RLU vs Random rewards: mean:215.0, std.dev:131.996212067
+RLU vs RLK rewards: mean:266.7, std.dev:183.438300254
+RLK vs RLU rewards: mean:171.9, std.dev:137.749373864
+RLK vs VI rewards: mean:-44.5, std.dev:166.749062966
+RLK vs Random rewards: mean:228.2, std.dev:166.432448759
+RLK vs RLK rewards: mean:208.5, std.dev:251.155828123
+VI vs RLU rewards: mean:445.4, std.dev:59.2860860574
+VI vs VI rewards: mean:263.1, std.dev:49.6275125309
+VI vs Random rewards: mean:457.5, std.dev:91.6474222223
+VI vs RLK rewards: mean:423.2, std.dev:87.1708666929
+Random vs RLU rewards: mean:40.1, std.dev:134.771992639
+Random vs VI rewards: mean:-77.5, std.dev:136.543948969
+Random vs Random rewards: mean:154.2, std.dev:152.444612893
+Random vs RLK rewards: mean:212.3, std.dev:193.734896185

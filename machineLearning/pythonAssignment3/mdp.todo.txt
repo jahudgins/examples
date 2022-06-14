@@ -1,0 +1,75 @@
+
+The project report should detail:
+Background/Problem Description Hypothesis and Project Approach Implementation Details Technical Specifications Analysis of Results Conclusion
+
+Sailing has some similarities with the more studied problem of the self-driving car. As with the typical self-driving car problem, a robotic sailboat needs to know its location, plan a course and adjust controls to feedback. There are some extra problems and fre,
+
+°
+notes
+
+(im
+
+
+endnotes
+
+
+http://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations
+O(n ^ 2.373)
+sparse
+
+
+674 states, 1872 actions, and 2896 transitions
+
+
+
+"Tied R:2pt P:A T:45 S:30"
+value interation
+(Pdb) pi model.states[basketballState].actions[1].transitions[0][0].toState
+{'actionName': 'goto2pt',
+ 'utility': -86.2535240729491}
+(Pdb) pi model.states[basketballState].actions[2].transitions[0][0].toState
+{'actionName': 'goto3pt',
+ 'utility': -86.25352407294912}
+
+policyIteration iterations:7, states:674, elapsed:2.573
+(Pdb) pi model.states[basketballState].actions[1].transitions[0][0].toState
+ 'utility': -86.253524072949091}
+(Pdb) pi model.states[basketballState].actions[2].transitions[0][0].toState
+ 'utility': -86.253524072949091}
+
+
+rl initially got stuck doing the same thing
+    since rewards are all 0 until the very end and Q initialized to 0 same decision made
+    increase random ness (epsilon = 1)
+    shuffle actions so tie breaker is not always the same
+
+basketball.py --graph --time 20
+random policy: mean:294.4, std.dev:196.445005027
+rl: mean:404.8, std.dev:164.638877547
+vi: mean:553.8, std.dev:37.0480768732
+
+
+maxRLiterations:5616 * 10 -- state evaluations: 11 per iteration (depth of tree 60/5)
+total = 
+
+
+rl has issues:
+    just one iteration was really good for buycar
+        problem: we know the rewards for the transitions before making a decision (although not chance)
+        doesn't matter for basketball because the rewards are all 0 for transitions
+        this should be ok for both of these domains
+            1) basketball no reward until the very end -- and that is a known reward
+                (ie for each action and its possible transitions, I know if I will win/lose/tie the game)
+                -- but maybe I don't know my percentages
+            2) buycar I should investigate and know the costs up front
+
+... but try if we don't know immediate rewards either:
+    shouldn't effect rl for basketball
+    should behave fairly randomly at start (low simulation reward) and then improve 
+    but it wasn't:
+        Policy generation was using utility -> switch to Q and random shuffle for tie breakers
+
+comparison of RL vs value iteration baseline (for plotRL)
+
+  ratio = 1.3;
+  rankdir=LR;

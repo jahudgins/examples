@@ -1,0 +1,8 @@
+Performance:
+    accuracy: proportion of correctly predicted examples in test set
+    http://www.cs.waikato.ac.nz/~remco/weka.bn.pdf
+
+nn
+    epoch is times through entire training set
+    http://stackoverflow.com/questions/2762215/parameter-tuning-for-perceptron-learning-algorithm
+

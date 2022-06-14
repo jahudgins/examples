@@ -1,0 +1,12 @@
+[
+{"VI":  {"elapsed": 0.1399998664855957, "iterations": 9, "numstates": 374}},
+{"VI":  {"elapsed": 1.226006031036377, "iterations": 18, "numstates": 2594}},
+{"VI":  {"elapsed": 3.7350168228149414, "iterations": 27, "numstates": 5114}},
+{"VI":  {"elapsed": 7.358034133911133, "iterations": 36, "numstates": 7634}},
+{"VI":  {"elapsed": 12.283057928085327, "iterations": 45, "numstates": 10154}},
+{"VI":  {"elapsed": 18.011085033416748, "iterations": 53, "numstates": 12674}},
+{"VI":  {"elapsed": 26.467124938964844, "iterations": 62, "numstates": 15194}},
+{"VI":  {"elapsed": 32.89615511894226, "iterations": 67, "numstates": 17714}},
+{"VI":  {"elapsed": 42.10319805145264, "iterations": 75, "numstates": 20234}},
+{"VI":  {"elapsed": 49.34323191642761, "iterations": 79, "numstates": 22754}}
+]

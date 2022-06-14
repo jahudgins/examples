@@ -1,0 +1,11 @@
+scrub data
+	missing from draft
+		2006 Jose
+		2006 JoshBoone.html
+		2007 JoãoGomes.html
+		draft2008/LucMbah
+		draft2008/Moute.html
+
+
+Improvements
+	stats are from single season prior to draft and do not consider strength of league
